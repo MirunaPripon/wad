@@ -1,3 +1,5 @@
 # wad
-WAD project ok
+WAD project Music Hosting Online Library
+
+Tema proiectului : check
 
