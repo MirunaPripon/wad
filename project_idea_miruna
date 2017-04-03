@@ -1,0 +1,10 @@
+web app
+music trial
+
+secured db for pro and light users
+encrypted sign up for pro users
+ sign up for light users form: full name(min 10 chars, max 50 chars), user(min 5 chars, max 10 chars), passw, repeat passw(verify if the same), address(not null), phone(not null)
+
+after sign up menu tabs: listen, playlists, genres, artists
+pop-up message to upgrade to pro
+ max songs to play untill pop- up appears: 15 (counter per played songs)
