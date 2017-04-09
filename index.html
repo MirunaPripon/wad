@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<script>
+    function formReset(){
+        $('#name').val();
+        $('#couuntry').uncheckAll();
+        $('#username').val();
+        $('#password').val();
+        $('#rpassword').val();
+        $('#email').val();
+        $('#telephone').val();
+        $('input[name=gender]').attr('checked',false);
+        $('input[name=subscribe]').attr('checked',false);
+    }
+   
+    function checkPass()
+    {
+        //Store the password field objects into variables ...
+        var pass1 = document.getElementById('password');
+        var pass2 = document.getElementById('rpassword');
+        //Store the Confimation Message Object ...
+        var message = document.getElementById('confirmMessage');
+        //Set the colors we will be using ...
+        //Compare the values in the password field 
+        //and the confirmation field
+        if(pass1.value == pass2.value){
+            //The passwords match. 
+            //Set the color to the good color and inform
+            //the user that they have entered the correct password 
+            message.innerHTML = "Passwords Match!"
+        }else{
+            //The passwords do not match.
+            //Set the color to the bad color and
+            //notify the user.
+            message.innerHTML = "Passwords Do Not Match!"
+        }
+    }
+    function checkPhone() {
+        var phoneno = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        var phone=document.getElementById('telephone');
+        var message = document.getElementById('confirmMessage1');
+        if(phone.value.match(phoneno)) {
+            message.innerHTML = "Valid phone number"
+            return true;
+        }  
+        else {  
+            message.innerHTML ="Invalid phone number! Try this XXX-XXX-XXXX or +XX-XXXX-XXXX";
+            return false;
+        }
+    }
+    function validateEmail() 
+    {
+    var re = /^[a-z][a-zA-Z0-9_.]*(\.[a-zA-Z][a-zA-Z0-9_.]*)?@[a-z][a-zA-Z-0-9]*\.[a-z]+(\.[a-z]+)?$/;
+    var email = document.getElementById("email");
+    var message = document.getElementById('confirmMessage2');
+    if(email.value.match(re)) {
+            message.innerHTML = "Valid email"
+            return true;
+        }  
+        else {  
+            message.innerHTML ="Invalid email! Try this example@emaple.com";
+            return false;
+        }
+    }
+</script>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="js/register.js"></script> 
+        <title>Registration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div id="content">
+        <div class="header">
+            <img src="http://www.traumafield.com/logos/groove.png" width="100px"  />
+            <span class="header-text">Online Music Library</span>
+        </div>
+        <nav>
+            <ul>
+                <a href="#">Home</a>
+                <a href="#">Register</a>
+                <a href="#">Login</a>
+                <a href="#">Contact</a>
+            </ul>
+        </nav>
+            <h1>Welcome to our online library!</h1>
+            <p>If you wish to register click on this button</p>
+                 <button type="submit">Register</button> 
+            <p>If you wish to login click on this button</p>
+                 <button type="submit">Login</button> 
+            
+        </div>
+    </body>
+</html>
