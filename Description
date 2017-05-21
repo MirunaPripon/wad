@@ -2,3 +2,10 @@ Bake Shop
 
 Description:
 
+This project consists of a web platform for our bakery shop store-chain.
+The user requires an account in order to order products.
+He can store multiple adresses for delivery. 
+He can also edit these adresses, removing them in the process.
+
+We have also devised an admin platform to add stores, tables 
+in our shops and to validate or invalidate orders made by the customers.
