@@ -1,5 +1,5 @@
 # wad
-WAD project Music Hosting Online Library
+WAD project Bake Shop
 
 Tema proiectului : check
 
